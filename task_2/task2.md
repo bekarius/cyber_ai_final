@@ -43,7 +43,7 @@ By fine-tuning pre-trained encoders (e.g., BERT, DistilBERT, DeBERTa) on domain-
 The figure below shows a toy **scaled dot-product attention** map for an HTTP request sequence.
 Rows = query tokens; columns = key tokens; brighter cells = stronger attention.
 
-![Scaled Dot-Product Attention](figs/attention_demo.png)
+![Scaled Dot-Product Attention](scripts/figs/attention_demo.png)
 
 > Example interpretation: the model focuses on suspicious tokens like “union” and “select” when processing the query, mirroring how a cybersecurity transformer detects malicious payload patterns within requests.
 
@@ -54,7 +54,7 @@ Rows = query tokens; columns = key tokens; brighter cells = stronger attention.
 Transformers lack intrinsic sequence order, so they add **sinusoidal positional encodings** to the input embeddings.
 Each dimension oscillates with a different frequency, enabling the model to infer both absolute and relative positions.
 
-![Sinusoidal Positional Encoding](figs/positional_encoding.png)
+![Sinusoidal Positional Encoding](scripts/figs/positional_encoding.png)
 
 > Distinct frequencies act as a basis allowing the network to compute relative distances linearly—critical for tracking event order in logs or packets.
 
